@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- ------------navbar--------------- -->
+    <nav>
+        <div class="font-poppins flex justify-between items-center py-4 px-40">
+            <!-- logo -->
+            <div>
+                <img src="./images/Logo.png" alt="logo">
+            </div>
+            <!-- search -->
+            <div class="bg-[#F5F5F5] w-72 flex p-4 rounded-md gap-4">
+                <img src="./images/Search.png" alt="search">
+                <input type="text" placeholder="search" class="bg-transparent border-none outline-none">
+            </div>
+            <!-- menu -->
+            <ul class="flex gap-12">
+                <li><a href="./index.html">Home</a></li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li>Blog</li>
+            </ul>
+            <!-- icon -->
+            <div class="flex gap-8">
+                <img src="./images/Cart.png" alt="Cart" class="w-8 h-8">
+                <img src="./images/Favorites.png" alt="Favorites" class="w-8 h-8">
+                <a href="./Login.html" class="hover:underline">
+                    <img src="./images/User.png" alt="User" class="w-8 h-8">
+                </a>
+            </div>
+        </div>
+        <div class="bg-[#656565] grid grid-cols-6 py-2 px-40">
+            <div class="flex justify-center gap-2">
+                <img src="./images/Phones.png" alt="icon" class="w-6 h-6">
+                <p>Phones</p>
+            </div>
+            <div class="flex justify-center gap-2 border-x-[1px] border-black">
+                <img src="./images/Computers.png" alt="icon" class="w-6 h-6">
+                <p>Computers</p>
+            </div>
+            <div class="flex justify-center gap-2">
+                <img src="./images/Smart Watches.png" alt="icon" class="w-6 h-6">
+                <p>Smart Watches</p>
+            </div>
+            <div class="flex justify-center gap-2 border-x-[1px] border-black">
+                <img src="./images/Cameras.png" alt="icon" class="w-6 h-6">
+                <p>Cameras</p>
+            </div>
+            <div class="flex justify-center gap-2">
+                <img src="./images/Headphones.png" alt="icon" class="w-6 h-6">
+                <p>Headphones</p>
+            </div>
+            <div class="flex justify-center gap-2 border-l-[1px] border-black">
+                <img src="./images/Gaming.png" alt="icon" class="w-6 h-6">
+                <p>Gaming</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- -------------banner-------------- -->
+    <div class="bg-[#241F1C] h-[632px] font-poppins flex justify-between items-center px-40">
+        <div>
+            <p class="text-[#909090] text-[25px]">Pro Beyond</p>
+            <p class="text-[96px] font-thin text-white">IPhone 14 <span class="font-semibold">Pro</span></p>
+            <p class="text-[#909090] text-[18px]">Created to change everythging for better. For everyone</p>
+            <button class="mt-12 px-[56px] py-4 text-center rounded-md border-2 border-white text-white">Shop
+                Now</button>
+        </div>
+        <div>
+            <img src="./images/Iphone Imagebanner.png" alt="banner">
+        </div>
+    </div>
+
+
+    <!-- -------------advertisement-------- -->
+    <div class="flex">
+        <!-- ---left part--- -->
+        <div class="flex-1">
+            <!-- first row -->
+            <div class="flex items-center">
+                <img src="./images/PlayStation.png" alt="PlayStation" class="">
+                <div class="pr-6">
+                    <p class="font-semibold text-[49px]">PlayStation 5</p>
+                    <p class="text-sm text-[#909090]">Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O
+                        will
+                        redefine your PlayStation experience.</p>
+                </div>
+            </div>
+
+            <!-- second row -->
+            <div class="flex">
+                <div class="flex items-center flex-1">
+                    <img src="./images/hero__gnfk5g59t0qe_xlarge_2x 1.png" alt="hero">
+                    <div class="px-12">
+                        <p class="text-3xl">Apple <br> airpod <br> <span class="font-semibold">Max</span></p>
+                        <p class="text-sm text-[#909090]">Computational audio. Listen, it's powerful</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#353535] flex items-center flex-1">
+                    <img src="./images/image 36.png" alt="36">
+                    <div class="px-6">
+                        <p class="text-3xl text-white">Apple <br> Vision <span class="font-semibold">Pro</span></p>
+                        <p class="text-sm text-[#909090]">An immersive way to experience entertainment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---right part--- -->
+        <div class="bg-[#EDEDED] py-10 flex justify-end items-center flex-1">
+            <div class="pl-12">
+                <p class="text-[64px] font-thin">Mackbook <span class="font-semibold">Air</span></p>
+                <p class="text-sm text-[#909090]">The new 15‑inch MacBook Air makes room for more of what you love with
+                    a spacious Liquid Retina display.</p>
+                <button class="px-[56px] py-4 text-center rounded-md border-[1px] border-black">Shop
+                    Now</button>
+            </div>
+            <img src="./images/MacBook Pro 14.png" alt="mackbook">
+        </div>
+    </div>
+
+    <!-- -------------Category------------- -->
+    <div class="py-20 px-40 space-y-8 bg-[#FAFAFA]">
+        <div class="flex justify-between">
+            <p class="text-2xl font-semibold">Browse By Category</p>
+            <div class="flex gap-4">
+                <img src="./images/IconL.png" alt="icon">
+                <img src="./images/IconR.png" alt="icon">
+            </div>
+        </div>
+
+        <div class="font-poppins flex justify-between">
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Phones.png" alt="Phones">
+                <p class="text-[16px] font-semibold">Phones</p>
+            </div>
+
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Smart Watches.png" alt="Smart Watches">
+                <p class="text-[16px] font-semibold">Smart Watches</p>
+            </div>
+
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Cameras.png" alt="Cameras">
+                <p class="text-[16px] font-semibold">Cameras</p>
+            </div>
+
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Headphones.png" alt="Headphones">
+                <p class="text-[16px] font-semibold">Headphones</p>
+            </div>
+
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Computers.png" alt="Computers">
+                <p class="text-[16px] font-semibold">Computers</p>
+            </div>
+
+            <div class="bg-[#EDEDED] rounded-2xl w-40 h-32 flex flex-col items-center justify-center gap-2">
+                <img src="./images/Gaming.png" alt="Gaming">
+                <p class="text-[16px] font-semibold">Gaming</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------Product-------------- -->
+    <div class="py-14 px-40 font-poppins space-y-8">
+        <div class="flex gap-8">
+            <p class="text-lg font-semibold text-[#8b8b8b]">New Arrival</p>
+            <p class="text-lg font-semibold text-[#8b8b8b]">Best Seller</p>
+            <p class="text-lg font-semibold text-[#8b8b8b]">Featured Products</p>
+        </div>
+
+        <div class="flex justify-between flex-wrap gap-4">
+            <!-- 1 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (1).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)
+                    </p>
+                    <p class="font-semibold text-2xl">1,35,990৳</p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (2).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Blackmagic Pocket Cinema <br> Camera 6k
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        5,99,900৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (3).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple Watch Series 9 GPS <br> 41mm Starlight Aluminium <br> Case
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        47,990৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (4).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        AirPods Max Silver
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        65,000৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (5).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Samsung Galaxy Watch6 <br> Classic 47mm Black
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        39,800৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 6 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (6).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Galaxy Z Fold5 Unlocked |<br> 256GB | Phantom Black
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        195,500৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 7 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (7).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Galaxy Buds FE <br>
+                        Graphite
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        8,800৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 8 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (8).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple iPad 9 10.2" 64GB Wi-Fi <br>Silver (MK2L3) 2021
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        33,000৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- -------------other product-------- -->
+    <div class="font-poppins flex">
+        <div class="w-1/4 space-y-4 pb-14">
+            <div class="relative">
+                <img src="./images/image 39.png" alt="39" class="h-80">
+                <img src="./images/image 12.png" alt="12" class="absolute right-0 top-4">
+            </div>
+
+            <div class="px-8 space-y-4">
+                <p class="text-[32px] font-light leading-[48px]">
+                    Popular Products
+                </p>
+                <p class="text-sm font-medium text-[#909090]">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease
+                    of
+                    use.
+                </p>
+                <button class="py-4 px-14 border-[2px] border-black rounded-md font-medium">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="bg-[#F9F9F9] w-1/4 space-y-4 pb-14">
+            <div class="flex justify-end">
+                <img src="./images/image 64.png" alt="39" class="h-80">
+            </div>
+
+            <div class="px-8 space-y-4">
+                <p class="text-[32px] font-light leading-[48px]">
+                    Ipad Pro
+                </p>
+                <p class="text-sm font-medium text-[#909090]">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease
+                    of
+                    use.
+                </p>
+                <button class="py-4 px-14 border-[2px] border-black rounded-md font-medium">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="bg-[#EAEAEA] w-1/4 space-y-4 pb-14">
+            <div>
+                <img src="./images/image 41.png" alt="39" class="h-80">
+            </div>
+
+            <div class="px-8 space-y-4">
+                <p class="text-[32px] font-light leading-[48px]">
+                    Samsung Galaxy
+                </p>
+                <p class="text-sm font-medium text-[#909090]">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease
+                    of
+                    use.
+                </p>
+                <button class="py-4 px-14 border-[2px] border-black rounded-md font-medium">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="bg-[#2C2C2C] w-1/4 space-y-4 pb-14">
+            <div class="flex justify-end">
+                <img src="./images/MacBook Pro 14.png" alt="39" class="h-80">
+            </div>
+
+            <div class="px-8 space-y-4">
+                <p class="text-[32px] font-light leading-[48px] text-white">
+                    Mackbook Pro
+                </p>
+                <p class="text-sm font-medium text-[#909090]">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease
+                    of
+                    use.
+                </p>
+                <button class="py-4 px-14 border-[2px] border-white rounded-md font-medium text-white">Shop Now</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------discount------------- -->
+    <div class="py-20 px-40 space-y-8">
+        <div class="text-2xl font-medium">
+            Discounts up to -50%
+        </div>
+
+        <div class="flex justify-between">
+            <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                <div class="flex justify-end w-full">
+                    <img src="./images/Favorites.png" alt="Favourite">
+                </div>
+                <img src="./images/Iphone 14 pro 1 (9).png" alt="img">
+                <p class="font-medium text-[16px] text-center">
+                    Apple iPhone 14 Pro 512GB <br>Gold (MQ233)
+                </p>
+                <p class="font-semibold text-2xl">167,800৳</p>
+                <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+            </div>
+
+            <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                <div class="flex justify-end w-full">
+                    <img src="./images/Favorites.png" alt="Favourite">
+                </div>
+                <img src="./images/Iphone 14 pro 1 (10).png" alt="img">
+                <p class="font-medium text-[16px] text-center">
+                    AirPods Max Silver
+                </p>
+                <p class="font-semibold text-2xl">64,990৳</p>
+                <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+            </div>
+
+            <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                <div class="flex justify-end w-full">
+                    <img src="./images/Favorites.png" alt="Favourite">
+                </div>
+                <img src="./images/Iphone 14 pro 1 (11).png" alt="img">
+                <p class="font-medium text-[16px] text-center">
+                    Apple Watch Series 9 GPS <br> 41mm Starlight Aluminium <br>Case
+                </p>
+                <p class="font-semibold text-2xl">47,790৳</p>
+                <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+            </div>
+
+            <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                <div class="flex justify-end w-full">
+                    <img src="./images/Favorites.png" alt="Favourite">
+                </div>
+                <img src="./images/Iphone 14 pro 1 (12).png" alt="img">
+                <p class="font-medium text-[16px] text-center">
+                    Apple iPhone 14 Pro 1TB Gold <br>(MQ2V3)
+                </p>
+                <p class="font-semibold text-2xl">210,990৳</p>
+                <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------banner 2------------- -->
+    <div class="relative font-poppins">
+        <img src="./images/Banner 2.png" alt="banner">
+        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <p class="font-thin text-white text-7xl">Big Summer <span class="font-medium">Sale</span></p>
+            <p class="text-[#787878] text-center">Get it now</p>
+            <button class="py-4 px-14 rounded-md border-[2px] border-white text-white mt-10 mx-auto block">Shop
+                Now</button>
+        </div>
+    </div>
+
+    <!-- -------------footer--------------- -->
+    <footer class="bg-black text-white font-poppins py-24 px-40">
+        <div class="flex justify-between">
+            <div class="space-y-6">
+                <img src="./images/Group 1.png" alt="logo">
+                <p class="text-sm text-[#CFCFCF]">We are an all in one solution for you to compare any IT <br>Product
+                    available in the
+                    market.</p>
+            </div>
+            <div class="space-y-4">
+                <p class="text-[16px] font-semibold">Services</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Bonus program</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Gift cards</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Credit and payment</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Service contracts</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Non-cash account</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Payment</p>
+            </div>
+            <div class="space-y-4">
+                <p class="text-[16px] font-semibold">Assistance to the buyer</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Find an order</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Terms of delivery</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Exchange and return of goods</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Guarantee</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Frequently asked questions</p>
+                <p class="text-sm font-light text-[#CFCFCF]">Terms of use of the site</p>
+            </div>
+        </div>
+
+        <div class="flex gap-8 items-center mt-10">
+            <img src="./images/Twitter.png" alt="icon">
+            <img src="./images/Facebook.png" alt="icon">
+            <img src="./images/Tiktok.png" alt="icon">
+            <img src="./images/Instagram.png" alt="icon">
+        </div>
+    </footer>
+</body>
+
+</html>
