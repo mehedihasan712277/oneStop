@@ -11,7 +11,7 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-[#F5F5F5] font-poppins">
+<body class="font-poppins">
     <!-- ------------navbar--------------- -->
     <nav class="bg-white">
         <div class="font-poppins flex justify-between items-center py-4 px-40">
@@ -70,9 +70,24 @@
     <!-- ------------main------------------ -->
 
     <main class="py-12 space-y-8">
+        <div class="w-fit mx-auto">
+            <p>Shipment Method</p>
+            <div class="space-y-4">
+                <div class="bg-slate-100 px-4 rounded py-3 flex items-center gap-4 w-96">
+                    <input type="radio" name="type">
+                    <p>Free</p>
+                    <p>Regular Shipment</p>
+                </div>
+                <div class="bg-slate-100 px-4 rounded py-3 flex items-center gap-4 w-96">
+                    <input type="radio" name="type">
+                    <p>200Tk</p>
+                    <p>Express delivery</p>
+                </div>
+            </div>
+        </div>
         <div class="gap-4 flex justify-end">
-            <a href="./Cart.html"><button class="border-2 border-black w-32 rounded py-2">Back</button></a>
-            <a href="./Address.html"><button class="border-2 border-black w-32 rounded py-2">Next</button></a>
+            <a href="./Address.html"><button class="border-2 border-black w-32 rounded py-2">Back</button></a>
+            <a href="./CheckOut.html"><button class="border-2 border-black w-32 rounded py-2">Next</button></a>
         </div>
     </main>
 
