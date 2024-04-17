@@ -9,9 +9,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <style>
+        .active {
+            border-width: 2px;
+            border-color: black;
+            color: black;
+        }
+    </style>
 </head>
 
-<body class="bg-[#F5F5F5] font-poppins">
+<body class="font-poppins">
     <!-- ------------navbar--------------- -->
     <nav class="bg-white">
         <div class="font-poppins flex justify-between items-center py-4 px-40">
@@ -69,8 +76,131 @@
     </nav>
 
     <!-- ------------main----------------- -->
-    <main>
-        Details
+    <main class="font-poppins py-14 px-40">
+        <div class="flex items-center gap-8">
+            <!-- image slider -->
+            <div class="flex gap-16 flex-1">
+                <!-- side buttons -->
+                <div class="flex flex-col justify-between items-center">
+                    <button>
+                        <img src="./images/Details/image 57.png" alt="">
+                    </button>
+                    <button>
+                        <img src="./images/Details/image 61.png" alt="">
+                    </button>
+                    <button>
+                        <img src="./images/Details/image 62.png" alt="">
+                    </button>
+                    <button>
+                        <img src="./images/Details/image 63.png" alt="">
+                    </button>
+                </div>
+                <!-- display -->
+                <div>
+                    <img src="./images/Details/Image.png" alt="img" class="h-[516px] w-[412px]">
+                </div>
+            </div>
+            <!-- deatils -->
+            <div class="flex-1 space-y-4">
+                <p class="text-[40px] font-bold">Apple iPhone 14 Pro Max</p>
+                <p>
+                    <span class="text-3xl font-medium">1,35,990৳ </span>
+                    <span class="text-[#A0A0A0] text-2xl">
+                        <del>1,45,990৳</del>
+                    </span>
+                </p>
+                <!-- color -->
+                <div class="flex items-center gap-1">
+                    <span>Select Color:</span>
+                    <button class="h-6 w-6 rounded-full bg-black"></button>
+                    <button class="h-6 w-6 rounded-full bg-[#781DBC]"></button>
+                    <button class="h-6 w-6 rounded-full bg-red-500"></button>
+                    <button class="h-6 w-6 rounded-full bg-[#E1B000]"></button>
+                    <button class="h-6 w-6 rounded-full bg-[#E8E8E8]"></button>
+                </div>
+                <!-- ram -->
+                <div>
+                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5] active">128GB</button>
+                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">256GB</button>
+                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">512GB</button>
+                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">1TB</button>
+                </div>
+                <!-- features -->
+                <div class="flex flex-wrap gap-4">
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/Screensize.png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                Screen size
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                6.7''
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/smartphone-rotate-2-svgrepo-com 2.png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                CPU
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                Apple A16 Bionic
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/smartphone-rotate-2-svgrepo-com 2 (1).png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                Number of Cores
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                6
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/smartphone-rotate-2-svgrepo-com 2 (2).png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                Main camera
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                48-12 -12 MP
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/smartphone-rotate-2-svgrepo-com 2 (3).png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                Front camera
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                12 MP
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
+                        <img src="./images/Details/smartphone-rotate-2-svgrepo-com 2 (4).png" alt="icon">
+                        <div>
+                            <p class="text-[#A7A7A7] text-sm font-medium">
+                                Battery capacity
+                            </p>
+                            <p class="text-[#4E4E4E] text-sm font-medium">
+                                4323 mAh
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- -----------footer----------------- -->
