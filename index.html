@@ -9,6 +9,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <style>
+        .active {
+            border-color: black;
+        }
+    </style>
 </head>
 
 <body>
@@ -177,12 +182,19 @@
     <!-- -------------Product-------------- -->
     <div class="py-14 px-40 font-poppins space-y-8">
         <div class="flex gap-8">
-            <p class="text-lg font-semibold text-[#8b8b8b]">New Arrival</p>
-            <p class="text-lg font-semibold text-[#8b8b8b]">Best Seller</p>
-            <p class="text-lg font-semibold text-[#8b8b8b]">Featured Products</p>
+            <p onclick="showNew()"
+                class="name text-lg font-semibold text-[#8b8b8b] border-b-2 border-b-white cursor-pointer active">
+                New
+                Arrival</p>
+            <p onclick="showBest()"
+                class="name text-lg font-semibold text-[#8b8b8b] border-b-2 border-b-white cursor-pointer">Best
+                Seller</p>
+            <p onclick="showFeatured()"
+                class="name text-lg font-semibold text-[#8b8b8b] border-b-2 border-b-white cursor-pointer">
+                Featured Products</p>
         </div>
 
-        <div class="flex justify-between flex-wrap gap-4">
+        <div class="tab new flex justify-between flex-wrap gap-4">
             <!-- 1 -->
             <a href="./Product.html" target="_blank">
                 <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
@@ -306,6 +318,168 @@
                     </p>
                     <p class="font-semibold text-2xl">
                         33,000৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+        </div>
+
+        <div class="tab best hidden justify-between flex-wrap gap-4">
+            <!-- 1 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (1).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)
+                    </p>
+                    <p class="font-semibold text-2xl">1,35,990৳</p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (2).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Blackmagic Pocket Cinema <br> Camera 6k
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        5,99,900৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (3).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple Watch Series 9 GPS <br> 41mm Starlight Aluminium <br> Case
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        47,990৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (4).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        AirPods Max Silver
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        65,000৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+        </div>
+
+        <div class="tab featured hidden justify-between flex-wrap gap-4">
+            <!-- 1 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (1).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)
+                    </p>
+                    <p class="font-semibold text-2xl">1,35,990৳</p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (2).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Blackmagic Pocket Cinema <br> Camera 6k
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        5,99,900৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 3 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (3).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Apple Watch Series 9 GPS <br> 41mm Starlight Aluminium <br> Case
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        47,990৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 4 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (4).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        AirPods Max Silver
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        65,000৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 5 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (5).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Samsung Galaxy Watch6 <br> Classic 47mm Black
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        39,800৳
+                    </p>
+                    <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
+                </div>
+            </a>
+            <!-- 6 -->
+            <a href="./Product.html" target="_blank">
+                <div class="w-[268px] h-[456px] bg-[#F6F6F6] rounded-lg py-6 px-4 flex flex-col items-center gap-4">
+                    <div class="flex justify-end w-full">
+                        <img src="./images/Favorites.png" alt="Favourite">
+                    </div>
+                    <img src="./images/Iphone 14 pro 1 (6).png" alt="img">
+                    <p class="font-medium text-[16px] text-center">
+                        Galaxy Z Fold5 Unlocked |<br> 256GB | Phantom Black
+                    </p>
+                    <p class="font-semibold text-2xl">
+                        195,500৳
                     </p>
                     <button class="py-3 px-16 text-sm font-medium bg-black text-white rounded-lg">Buy Now</button>
                 </div>
@@ -495,6 +669,39 @@
             <img src="./images/Instagram.png" alt="icon">
         </div>
     </footer>
+
+
+    <script>
+        const btn = document.querySelectorAll(".name");
+        btn.forEach(ele => {
+            ele.addEventListener("click", (e) => {
+                btn.forEach(item => item.classList.remove("active"));
+                e.target.classList.add("active")
+            })
+        })
+
+
+        const tabs = document.querySelectorAll(".tab");
+        const showNew = () => {
+            tabs.forEach(element => {
+                element.style.display = "none"
+            })
+            document.querySelector(".new").style.display = "flex"
+        }
+
+        const showBest = () => {
+            tabs.forEach(element => {
+                element.style.display = "none"
+            })
+            document.querySelector(".best").style.display = "flex"
+        }
+        const showFeatured = () => {
+            tabs.forEach(element => {
+                element.style.display = "none"
+            })
+            document.querySelector(".featured").style.display = "flex"
+        }
+    </script>
 </body>
 
 </html>
