@@ -80,9 +80,13 @@
                     <p class="text-sm">#25139526913984</p>
                 </div>
                 <div class="flex items-center">
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">-</div>
-                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs">1</div>
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">+</div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="decrementValue1()">-</div>
+                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs" id="counter1">
+                        1
+                    </div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="incrementValue1()">+</div>
                 </div>
                 <p class="font-bold">1,35,990৳</p>
                 <div class="hover:bg-slate-300 w-fit cursor-pointer">
@@ -97,9 +101,13 @@
                     <p class="text-sm">#53459358345</p>
                 </div>
                 <div class="flex items-center">
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">-</div>
-                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs">1</div>
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">+</div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="decrementValue2()">-</div>
+                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs" id="counter2">
+                        1
+                    </div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="incrementValue2()">+</div>
                 </div>
                 <p class="font-bold">64,990৳</p>
                 <div class="hover:bg-slate-300 w-fit cursor-pointer">
@@ -114,9 +122,13 @@
                     <p class="text-sm">#63632324</p>
                 </div>
                 <div class="flex items-center">
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">-</div>
-                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs">1</div>
-                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer">+</div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="decrementValue3()">-</div>
+                    <div class="h-8 w-8 flex justify-center items-center border border-slate-300 text-xs" id="counter3">
+                        1
+                    </div>
+                    <div class="h-8 w-8 flex justify-center items-center hover:bg-slate-200 cursor-pointer"
+                        onclick="incrementValue3()">+</div>
                 </div>
                 <p class="font-bold">47,790৳</p>
                 <div class="hover:bg-slate-300 w-fit cursor-pointer">
@@ -172,8 +184,6 @@
         </div>
     </main>
 
-
-
     <!-- -----------footer----------------- -->
     <footer class="bg-black text-white font-poppins py-24 px-40">
         <div class="flex justify-between">
@@ -210,6 +220,50 @@
             <img src="./images/Instagram.png" alt="icon">
         </div>
     </footer>
+
+    <script>
+        let count1 = 1;
+        let count2 = 1;
+        let count3 = 1;
+        const counterElement1 = document.getElementById('counter1');
+        const counterElement2 = document.getElementById('counter2');
+        const counterElement3 = document.getElementById('counter3');
+
+        function incrementValue1() {
+            count1++;
+            counterElement1.textContent = count1;
+        }
+        function decrementValue1() {
+            if (count1 > 1) {
+                count1--;
+            }
+            counterElement1.textContent = count1;
+        }
+
+
+        function incrementValue2() {
+            count2++;
+            counterElement2.textContent = count2;
+        }
+        function decrementValue2() {
+            if (count2 > 1) {
+                count2--;
+            }
+            counterElement2.textContent = count2;
+        }
+
+
+        function incrementValue3() {
+            count3++;
+            counterElement3.textContent = count3;
+        }
+        function decrementValue3() {
+            if (count3 > 1) {
+                count3--;
+            }
+            counterElement3.textContent = count3;
+        }
+    </script>
 </body>
 
 </html>
