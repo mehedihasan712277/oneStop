@@ -11,9 +11,15 @@
         rel="stylesheet">
     <style>
         .active {
-            border-width: 2px;
-            border-color: black;
-            color: black;
+            border-width: 4px;
+            border-color: aqua;
+            padding: 1px;
+            /* color: black; */
+        }
+
+        .activeR {
+            color: white;
+            background-color: gray;
         }
     </style>
 </head>
@@ -110,22 +116,44 @@
                         <del>1,45,990৳</del>
                     </span>
                 </p>
-                <!-- color -->
-                <div class="flex items-center gap-1">
-                    <span>Select Color:</span>
-                    <button class="h-6 w-6 rounded-full bg-black"></button>
-                    <button class="h-6 w-6 rounded-full bg-[#781DBC]"></button>
-                    <button class="h-6 w-6 rounded-full bg-red-500"></button>
-                    <button class="h-6 w-6 rounded-full bg-[#E1B000]"></button>
-                    <button class="h-6 w-6 rounded-full bg-[#E8E8E8]"></button>
-                </div>
-                <!-- ram -->
-                <div>
-                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5] active">128GB</button>
-                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">256GB</button>
-                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">512GB</button>
-                    <button class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]">1TB</button>
-                </div>
+
+                <form id="phoneForm" class="space-y-4">
+                    <!-- Color selection -->
+                    <div class="flex items-center gap-1">
+                        <span>Select Color:</span>
+                        <button type="button" class="h-6 w-6 rounded-full cbtn bg-black"
+                            onclick="setColor('black', this)"></button>
+                        <button type="button" class="h-6 w-6 rounded-full cbtn bg-[#781DBC]"
+                            onclick="setColor('#781DBC', this)"></button>
+                        <button type="button" class="h-6 w-6 rounded-full cbtn bg-red-500"
+                            onclick="setColor('red-500', this)"></button>
+                        <button type="button" class="h-6 w-6 rounded-full cbtn bg-[#E1B000]"
+                            onclick="setColor('#E1B000', this)"></button>
+                        <button type="button" class="h-6 w-6 rounded-full cbtn bg-[#E8E8E8]"
+                            onclick="setColor('#E8E8E8', this)"></button>
+                    </div>
+
+                    <!-- RAM selection -->
+                    <div>
+                        <button type="button"
+                            class="rBtn py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5] activeR"
+                            onclick="setRAM('128GB', this)">128GB</button>
+                        <button type="button" class="rBtn py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                            onclick="setRAM('256GB', this)">256GB</button>
+                        <button type="button" class="rBtn py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                            onclick="setRAM('512GB', this)">512GB</button>
+                        <button type="button" class="rBtn py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                            onclick="setRAM('1TB', this)">1TB</button>
+                    </div>
+
+                    <!-- Hidden inputs to store selected values -->
+                    <input type="hidden" name="selectedColor" id="selectedColor" value="black">
+                    <input type="hidden" name="selectedRAM" id="selectedRAM" value="128GB">
+
+                    <!-- Submission button -->
+                    <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Submit</button>
+                </form>
+
                 <!-- features -->
                 <div class="flex flex-wrap gap-4">
                     <div class="w-[168px] h-16 p-4 rounded-md bg-[#F4F4F4] flex items-center gap-2">
@@ -505,6 +533,44 @@
             // Save the updated array back to local storage
             localStorage.setItem("myObjects", JSON.stringify(existingData));
         }
+
+
+
+
+        // Function to set the selected color
+        function setColor(color, element) {
+            document.getElementById('selectedColor').value = color;
+            document.querySelectorAll('.cbtn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            element.classList.add('active'); // Adding a ring to highlight selected button
+        }
+
+        // Function to set the selected RAM
+        function setRAM(ram, element) {
+            document.getElementById('selectedRAM').value = ram;
+            document.querySelectorAll('.rBtn').forEach(btn => {
+                btn.classList.remove('activeR');
+                // btn.classList.add('text-[#D5D5D5]');
+            });
+            element.classList.add('activeR'); // Changing color to indicate active state
+            // element.classList.remove('text-[#D5D5D5]');
+        }
+
+        // Initialize default selections on load
+        window.onload = function () {
+            setColor('black', document.querySelector('.cbtn')); // Set initial color
+            setRAM('128GB', document.querySelector('.rBtn')); // Set initial RAM
+        };
+
+        // Handling the form submission
+        document.getElementById('phoneForm').onsubmit = function (event) {
+            event.preventDefault(); // Prevent the form from submitting in the default way
+            const color = document.getElementById('selectedColor').value;
+            const ram = document.getElementById('selectedRAM').value;
+            alert(`You have selected ${color} color with ${ram} of RAM.`);
+            // Here, you can add code to actually send data to a server or process it further
+        };
     </script>
 </body>
 

@@ -4,43 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Append Object to Local Storage Array</title>
+    <title>Phone Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <button id="saveButton">Save Object</button>
+    <form id="phoneForm" class="space-y-4">
+        <!-- Color selection -->
+        <div class="flex items-center gap-1">
+            <span>Select Color:</span>
+            <button type="button" class="h-6 w-6 rounded-full bg-black" onclick="setColor('black', this)"></button>
+            <button type="button" class="h-6 w-6 rounded-full bg-[#781DBC]"
+                onclick="setColor('#781DBC', this)"></button>
+            <button type="button" class="h-6 w-6 rounded-full bg-red-500" onclick="setColor('red-500', this)"></button>
+            <button type="button" class="h-6 w-6 rounded-full bg-[#E1B000]"
+                onclick="setColor('#E1B000', this)"></button>
+            <button type="button" class="h-6 w-6 rounded-full bg-[#E8E8E8]"
+                onclick="setColor('#E8E8E8', this)"></button>
+        </div>
+
+        <!-- RAM selection -->
+        <div>
+            <button type="button" class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                onclick="setRAM('128GB', this)">128GB</button>
+            <button type="button" class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                onclick="setRAM('256GB', this)">256GB</button>
+            <button type="button" class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                onclick="setRAM('512GB', this)">512GB</button>
+            <button type="button" class="py-4 w-24 rounded-lg border-2 border-[#D5D5D5] text-[#D5D5D5]"
+                onclick="setRAM('1TB', this)">1TB</button>
+        </div>
+
+        <!-- Hidden inputs to store selected values -->
+        <input type="hidden" name="selectedColor" id="selectedColor" value="black">
+        <input type="hidden" name="selectedRAM" id="selectedRAM" value="128GB">
+
+        <!-- Submission button -->
+        <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Submit</button>
+    </form>
 
     <script>
-        function appendObjectToLocalStorage() {
-            // New object to be added
-            const newObject = {
-                id: Math.random(), // unique id using random number for demonstration
-                name: "John Doe",
-                email: "johndoe@example.com"
-            };
-
-            // Retrieve the existing data from local storage
-            let existingData = localStorage.getItem("myObjects");
-
-            // Check if there is existing data
-            if (existingData) {
-                existingData = JSON.parse(existingData); // Convert JSON string back to array
-            } else {
-                existingData = []; // Start as a new array if no data exists
-            }
-
-            // Add new object to array
-            existingData.push(newObject);
-
-            // Save the updated array back to local storage
-            localStorage.setItem("myObjects", JSON.stringify(existingData));
-
-            alert("Object added to local storage!");
+        // Function to set the selected color
+        function setColor(color, element) {
+            document.getElementById('selectedColor').value = color;
+            document.querySelectorAll('.bg-black, .bg-[#781DBC], .bg-red-500, .bg-[#E1B000], .bg-[#E8E8E8]').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-white');
+            });
+            element.classList.add('ring-2', 'ring-white'); // Adding a ring to highlight selected button
         }
 
-        // Get button and attach click event listener
-        document.getElementById("saveButton").addEventListener("click", appendObjectToLocalStorage);
+        // Function to set the selected RAM
+        function setRAM(ram, element) {
+            document.getElementById('selectedRAM').value = ram;
+            document.querySelectorAll('.py-4').forEach(btn => {
+                btn.classList.remove('text-white', 'bg-gray-700');
+                btn.classList.add('text-[#D5D5D5]');
+            });
+            element.classList.add('text-white', 'bg-gray-700'); // Changing color to indicate active state
+            element.classList.remove('text-[#D5D5D5]');
+        }
+
+        // Initialize default selections on load
+        window.onload = function () {
+            setColor('black', document.querySelector('.bg-black')); // Set initial color
+            setRAM('128GB', document.querySelector('.py-4')); // Set initial RAM
+        };
+
+        // Handling the form submission
+        document.getElementById('phoneForm').onsubmit = function (event) {
+            event.preventDefault(); // Prevent the form from submitting in the default way
+            const color = document.getElementById('selectedColor').value;
+            const ram = document.getElementById('selectedRAM').value;
+            alert(`You have selected ${color} color with ${ram} of RAM.`);
+            // Here, you can add code to actually send data to a server or process it further
+        };
     </script>
 
 </body>
