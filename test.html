@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Object to Local Storage Array</title>
+</head>
+
+<body>
+
+    <button id="saveButton">Save Object</button>
+
+    <script>
+        function appendObjectToLocalStorage() {
+            // New object to be added
+            const newObject = {
+                id: Math.random(), // unique id using random number for demonstration
+                name: "John Doe",
+                email: "johndoe@example.com"
+            };
+
+            // Retrieve the existing data from local storage
+            let existingData = localStorage.getItem("myObjects");
+
+            // Check if there is existing data
+            if (existingData) {
+                existingData = JSON.parse(existingData); // Convert JSON string back to array
+            } else {
+                existingData = []; // Start as a new array if no data exists
+            }
+
+            // Add new object to array
+            existingData.push(newObject);
+
+            // Save the updated array back to local storage
+            localStorage.setItem("myObjects", JSON.stringify(existingData));
+
+            alert("Object added to local storage!");
+        }
+
+        // Get button and attach click event listener
+        document.getElementById("saveButton").addEventListener("click", appendObjectToLocalStorage);
+    </script>
+
+</body>
+
+</html>
